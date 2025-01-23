@@ -97,7 +97,8 @@ resource "aws_instance" "jenkins" {
       "sudo systemctl enable jenkins",
       "sudo systemctl start jenkins",
       "sudo usermod -aG docker jenkins",
-      "sudo systemctl restart jenkins"
+      "sudo systemctl restart jenkins",
+      "sudo apt-get update -y"
     ]
 
          connection {
